@@ -1,0 +1,135 @@
+/* Random Quote Generator Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+    transition: background-color 0.5s ease;
+    color: #333;
+}
+
+.container {
+    max-width: 800px;
+    width: 90%;
+}
+
+#quote-container {
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    color: black;
+}
+
+#quote-text {
+    font-size: 1.8em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    color: #222;
+    font-weight: 300;
+}
+
+#quote-author {
+    font-size: 1.3em;
+    font-style: italic;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-in-out 0.2s, transform 0.5s ease-in-out 0.2s;
+    color: #666;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+button {
+    padding: 12px 25px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    background-color: #007BFF;
+    color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    min-width: 150px;
+}
+
+button:hover {
+    background-color: #0069d9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:active {
+    background-color: #0056b3;
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+button.secondary {
+    background-color: #6c757d;
+}
+
+button.secondary:hover {
+    background-color: #5a6268;
+}
+
+button.secondary:active {
+    background-color: #545b62;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #quote-container {
+        padding: 20px;
+    }
+    
+    #quote-text {
+        font-size: 1.4em;
+    }
+    
+    #quote-author {
+        font-size: 1.1em;
+    }
+    
+    button {
+        padding: 10px 20px;
+        min-width: 120px;
+    }
+    
+    .button-container {
+        gap: 10px;
+    }
+}
+.category-selector {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.category-selector select {
+    padding: 8px 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background: white;
+    font-size: 1rem;
+}
